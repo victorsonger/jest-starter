@@ -83,3 +83,4 @@ yarn test
 ## 致谢
 
 - 感谢 [Jest 实践指南](https://github.yanhaixiang.com/jest-tutorial/) 为本项目提供了灵感和指导。
+- [测试库汇总](https://testing-library.com/docs/react-testing-library/intro/)

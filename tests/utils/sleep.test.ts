@@ -1,6 +1,6 @@
 // tests/utils/sleep.ts
 // https://github.yanhaixiang.com/jest-tutorial/basic/mock-timer/#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95
-import sleep from "utils/sleep";
+import sleep from "@utils/sleep";
 
 describe("sleep", () => {
   it("可以在1s后执行", async () => {

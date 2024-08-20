@@ -1,5 +1,5 @@
 // tests/utils/after1000ms.test.ts
-import after1000ms from "utils/after1000ms";
+import after1000ms from "@utils/after1000ms";
 
 describe("after1000ms", () => {
   beforeAll(() => {

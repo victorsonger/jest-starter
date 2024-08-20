@@ -32,19 +32,19 @@
       "@/*": [
         "src/*"
       ],
-      "utils/*": [
+      "@utils/*": [
         "src/utils/*"
       ],
-      "components/*": [
+      "@components/*": [
         "src/components/*"
       ],
-      "apis/*": [
+      "@apis/*": [
         "src/apis/*"
       ],
-      "hooks/*": [
+      "@hooks/*": [
         "src/hooks/*"
       ],
-      "store/*": [
+      "@store/*": [
         "src/store/*"
       ]
     },
