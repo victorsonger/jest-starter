@@ -21,3 +21,12 @@
 
 // 使用 Jest 的 Spy 和扩展 expect 来 Mock `window.location`
 import "jest-location-mock";
+
+// mock console
+jest.spyOn(console, 'log').mockReturnValue();
+jest.spyOn(console, 'info').mockReturnValue();
+jest.spyOn(console, 'warn').mockReturnValue();
+jest.spyOn(console, 'error').mockReturnValue();
+// 或者使用插件
+// import mockConsole from "jest-mock-console";
+// mockConsole()
