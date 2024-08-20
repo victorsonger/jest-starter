@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "UNIT_PATH=${UNIT_PATH:-tests} jest \"$UNIT_PATH\""
   },
   "keywords": [],
   "author": "",
