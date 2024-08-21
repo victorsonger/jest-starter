@@ -19,8 +19,26 @@
 //   configurable: true,
 // })
 
+// mock api请求
+import server from "./mockServer/server";
 // 使用 Jest 的 Spy 和扩展 expect 来 Mock `window.location`
 import "jest-location-mock";
+// Matcher
+import "@testing-library/jest-dom";
+import { cleanup } from "@testing-library/react";
+
+
+beforeAll(() => {
+  server.listen();
+});
+
+afterEach(() => {
+  server.resetHandlers();
+});
+
+afterAll(() => {
+  server.close();
+});
 
 // mock console
 jest.spyOn(console, 'log').mockReturnValue();
@@ -31,9 +49,9 @@ jest.spyOn(console, 'error').mockReturnValue();
 // import mockConsole from "jest-mock-console";
 // mockConsole()
 
-Object.defineProperty(window, 'matchMedia', {
+Object.defineProperty(window, "matchMedia", {
   writable: true,
-  value: jest.fn().mockImplementation(query => ({
+  value: jest.fn().mockImplementation((query) => ({
     matches: false,
     media: query,
     onchange: null,

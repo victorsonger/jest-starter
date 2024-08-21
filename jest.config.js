@@ -88,6 +88,8 @@ module.exports = {
     "@/(.*)": "<rootDir>/src/$1",
     "@utils/(.*)": "<rootDir>/src/utils/$1",
     "@components/(.*)": "<rootDir>/src/components/$1",
+    "@apis/(.*)": "<rootDir>/src/apis/$1",
+    "@tests/(.*)": "<rootDir>/tests/$1",
   },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
@@ -184,7 +186,10 @@ module.exports = {
 
   // A map from regular expressions to paths to transformers
   // transform: undefined,
-
+  // https://github.yanhaixiang.com/jest-tutorial/basic/component-test/#less-%E7%9A%84%E5%BC%95%E5%85%A5%E9%97%AE%E9%A2%98
+  transform: {
+    ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
+  },
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   // transformIgnorePatterns: [
   //   "/node_modules/",
