@@ -2,6 +2,7 @@
 import React from "react";
 import Title from "@components/Title";
 import AuthButton from "@components/AuthButton";
+import User from "@components/User";
 
 const App = () => {
   return (
@@ -12,6 +13,9 @@ const App = () => {
       </section>
       <section>
         <AuthButton>登录</AuthButton>
+      </section>
+      <section>
+        <User />
       </section>
     </div>
   );

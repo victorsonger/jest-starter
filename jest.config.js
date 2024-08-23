@@ -88,6 +88,8 @@ module.exports = {
     "@/(.*)": "<rootDir>/src/$1",
     "@utils/(.*)": "<rootDir>/src/utils/$1",
     "@components/(.*)": "<rootDir>/src/components/$1",
+    "@store/(.*)": "<rootDir>/src/store/$1",
+    "@hooks/(.*)": "<rootDir>/src/hooks/$1",
     "@apis/(.*)": "<rootDir>/src/apis/$1",
     "@tests/(.*)": "<rootDir>/tests/$1",
   },
