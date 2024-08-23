@@ -21,13 +21,13 @@ export interface FetchUserRes {
 }
 
 export const fetchUser = async () => {
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-  return Promise.resolve({
-    data: {
-      name: "张三",
-      id: "123456",
-      age: 20,
-    },
-  });
-  // return axios.get<FetchUserRes>("https://mysite.com/api/users");
+  // await new Promise((resolve) => setTimeout(resolve, 1000));
+  // return Promise.resolve({
+  //   data: {
+  //     name: "张三",
+  //     id: "123456",
+  //     age: 20,
+  //   },
+  // });
+  return axios.get<FetchUserRes>("https://mysite.com/api/users");
 };
