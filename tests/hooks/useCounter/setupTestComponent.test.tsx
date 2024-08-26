@@ -3,7 +3,7 @@ import { act, render } from "@testing-library/react";
 import React from "react";
 
 const setup = (initialNumber: number) => {
-  const returnValue = ({} as unknown) as {
+  const returnValue = {} as unknown as {
     counter: ReturnType<typeof useCounter>[0];
     utils: ReturnType<typeof useCounter>[1];
   };
