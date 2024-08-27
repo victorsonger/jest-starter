@@ -11,6 +11,7 @@ on:
     branches: [ main ]
 
 jobs:
+  # https://github.com/victorsonger/jest-starter/settings/actions
   update-readme:
  
     runs-on: ubuntu-latest
