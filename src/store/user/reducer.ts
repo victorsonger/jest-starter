@@ -26,9 +26,10 @@ const userSlice = createSlice({
       state.name = action.payload.name;
       state.id = action.payload.id;
     });
-    builder.addCase(fetchUserThunk.rejected, (state) => {
-      state.status = "error";
-    });
+    // 暂时跳过这个case
+    // builder.addCase(fetchUserThunk.rejected, (state) => {
+    //   state.status = "error";
+    // });
   },
 });
 

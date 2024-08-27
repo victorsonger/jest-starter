@@ -2,8 +2,8 @@
 export const config = {
   getEnv() {
     // 很复杂的逻辑...
-    return 'test'
-  }
-}
+    return "test";
+  },
+};
 
-export const env = 'test';
+export const env = "test";

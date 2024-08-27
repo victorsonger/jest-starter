@@ -4,6 +4,7 @@ import thunk from "redux-thunk";
 import server from "../../mockServer/server";
 import { rest } from "msw";
 import { fetchUserThunk } from "@store/user/thunks";
+import reducer, { updateUserName } from "@store/user/reducer";
 
 // 初始化函数
 const setupHttp = (name?: string, age?: number) => {
@@ -58,6 +59,21 @@ describe("reducer", () => {
         //   age: 10,
         //   status: "complete",
         // });
+      });
+
+      it("可以更新用户姓名", () => {
+        // 测试 reducer 纯函数
+        const currentState = reducer(
+          {
+            id: "",
+            name: "",
+            age: 0,
+            status: "",
+          },
+          updateUserName({ name: "hello" })
+        );
+
+        expect(currentState.name).toEqual("hello");
       });
     });
   });
