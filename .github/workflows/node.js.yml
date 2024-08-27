@@ -27,3 +27,10 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
     - run: npm test
+
+    # 生成覆盖率报告
+    # https://github.yanhaixiang.com/jest-tutorial/basic/automation/#coveralls
+    - name: Coveralls
+    uses: coverallsapp/github-action@master
+    with:
+      github-token: ${{ secrets.GITHUB_TOKEN }}
