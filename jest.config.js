@@ -105,7 +105,8 @@ module.exports = {
 
   // A preset that is used as a base for Jest's configuration
   // preset: undefined,
-  preset: 'ts-jest',
+  // 把这个注释掉，改为通过下面的transform使用swc来转译
+  // preset: 'ts-jest',
 
   // Run tests from one or more projects
   // projects: undefined,
@@ -190,6 +191,9 @@ module.exports = {
   // transform: undefined,
   // https://github.yanhaixiang.com/jest-tutorial/basic/component-test/#less-%E7%9A%84%E5%BC%95%E5%85%A5%E9%97%AE%E9%A2%98
   transform: {
+    // 使用 swc 转译 JavaScript 和 TypeScrit
+    "^.+\\.(t|j)sx?$": ["@swc/jest"], // 速度提升还是很明显的  38个测试 时间能从10s压缩到3s
+    // 静态资源 stub 转译
     ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
   },
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
