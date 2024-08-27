@@ -23,7 +23,7 @@ jobs:
     - name: Update README with timestamp
       run: |
         TIMESTAMP=$(date +%s)
-        sed -i 's/timestamp=[0-9]*/timestamp=$TIMESTAMP/g' README.md
+        sed -i "s/timestamp=[0-9]*/timestamp=$TIMESTAMP/g" README.md
 
     - name: Commit changes
       run: |
