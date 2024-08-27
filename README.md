@@ -1,6 +1,8 @@
 
 # Jest 入门项目
 
+[![Coverage Status](https://coveralls.io/repos/github/victorsonger/jest-starter/badge.svg?branch=main)](https://coveralls.io/github/victorsonger/jest-starter?branch=main)
+
 这是一个参考 [Jest 实践指南](https://github.yanhaixiang.com/jest-tutorial/) 的 Jest 学习项目。通过遵循指南中的示例和方法，本项目旨在练习并掌握 Jest 测试技巧。
 
 ## 项目概述
