@@ -48,10 +48,10 @@ describe("useCounter", () => {
     const useCounterData: any = setup(0);
 
     act(() => {
-      useCounterData.utils.set(10);
+      useCounterData.utils.set(11);
     });
 
-    expect(useCounterData.counter).toEqual(10);
+    expect(useCounterData.counter).toEqual(11);
   });
 
   it("可以重置值", async () => {
