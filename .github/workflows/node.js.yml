@@ -1,0 +1,29 @@
+# 参考 https://github.yanhaixiang.com/jest-tutorial/basic/automation/#github-actions
+
+# .github/workflows/node.js.yml
+name: Node.js CI
+
+# 这里 on 会监听 main 分支的 git push 和 PR 提交两个操作。 开发者在 main 分支推代码或者 PR 合并都会执行下面配置的 jobs
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm install
+    - run: npm test
